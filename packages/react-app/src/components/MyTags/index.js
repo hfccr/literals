@@ -3,7 +3,7 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import { useEthers } from '@usedapp/core';
 import { lit } from '../lit/index';
-import { ChipController } from '../LiteralChip/ChipController';
+import { ChipController } from '../ChipController';
 
 export function MyTags() {
   const { account, error } = useEthers();
