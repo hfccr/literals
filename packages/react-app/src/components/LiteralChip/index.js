@@ -3,7 +3,7 @@ import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import { CategoryIcon } from './CategoryIcon';
 
-export function LiteralChip({ tag, address }) {
+export function LiteralChip({ tag, address, onClick }) {
   const { name, icon, category } = tag;
   return (
     <Chip
@@ -12,6 +12,7 @@ export function LiteralChip({ tag, address }) {
       avatar={<Avatar src={icon} />}
       onDelete={() => {}}
       deleteIcon={<CategoryIcon category={category} />}
+      onClick={onClick}
     />
   );
 }

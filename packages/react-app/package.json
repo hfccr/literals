@@ -36,6 +36,7 @@
     "@usedapp/core": "^0.12.1",
     "graphql": "^16.3.0",
     "ipfs-deploy": "^11.2.0",
+    "jwt-decode": "^3.1.2",
     "key-did-provider-ed25519": "^2.0.1",
     "lit-js-sdk": "^1.1.198",
     "object-hash": "^3.0.0",

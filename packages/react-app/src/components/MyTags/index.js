@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Alert from '@mui/material/Alert';
+import Container from '@mui/material/Container';
 import AlertTitle from '@mui/material/AlertTitle';
+import Stack from '@mui/material/Stack';
 import { useEthers } from '@usedapp/core';
 import { lit } from '../lit/index';
 import { ChipController } from '../ChipController';
@@ -38,5 +40,19 @@ export function MyTags() {
       />
     );
   });
-  return <div>{tags}</div>;
+  return (
+    <div>
+      <Container justifyContent="center" alignItems="center">
+        <Stack
+          spacing={4}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ margin: 4 }}
+        >
+          {tags}
+        </Stack>
+      </Container>
+    </div>
+  );
 }
