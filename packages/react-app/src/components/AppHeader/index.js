@@ -26,7 +26,7 @@ export function AppHeader() {
             component="div"
             sx={{ flexGrow: 1, fontFamily: 'Roboto Mono' }}
           >
-            LITERAL
+            LITERALS
           </Typography>
           <WalletButton />
         </Toolbar>

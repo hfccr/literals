@@ -17,7 +17,7 @@ export const Intro = () => {
             textAlign: 'center',
           }}
         >
-          LITERAL
+          LITERALS
         </Typography>
         <Typography variant="h6" sx={{ maxWidth: 'md', textAlign: 'center' }}>
           A Protocol To Create And Distribute Provable Facts Against An Address
