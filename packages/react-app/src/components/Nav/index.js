@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import { Intro } from './../Intro';
 import { Explore } from './../Explore';
 import { MyTags } from './../MyTags';
+import { SocialProfile } from './../SocialProfile';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +57,7 @@ export function Nav() {
           <Tab label="Trust Models" {...a11yProps(1)} />
           <Tab label="Explore" {...a11yProps(2)} />
           <Tab label="My Tags" {...a11yProps(3)} />
-          <Tab label="Forge" {...a11yProps(4)} />
+          <Tab label="Social Profile" {...a11yProps(4)} />
           <Tab label="Join" {...a11yProps(5)} />
           <Tab label="Web3" {...a11yProps(6)} />
           <Tab label="Web2" {...a11yProps(7)} />
@@ -75,7 +76,7 @@ export function Nav() {
         <MyTags />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Forge
+        <SocialProfile />
       </TabPanel>
       <TabPanel value={value} index={5}>
         Join

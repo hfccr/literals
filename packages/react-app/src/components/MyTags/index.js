@@ -42,17 +42,15 @@ export function MyTags() {
   });
   return (
     <div>
-      <Container justifyContent="center" alignItems="center">
-        <Stack
-          spacing={4}
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ margin: 4 }}
-        >
-          {tags}
-        </Stack>
-      </Container>
+      <Stack
+        spacing={4}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ margin: 4 }}
+      >
+        {tags}
+      </Stack>
     </div>
   );
 }
