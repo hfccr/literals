@@ -1,5 +1,5 @@
 {
-  "name": "@my-app/react-app",
+  "name": "@brub/react-app",
   "version": "1.0.0",
   "homepage": "./",
   "browserslist": {
@@ -15,10 +15,19 @@
     ]
   },
   "dependencies": {
-    "@my-app/contracts": "^1.0.0",
     "@apollo/client": "^3.5.10",
+    "@brub/contracts": "^1.0.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
     "@ethersproject/contracts": "^5.6.0",
     "@ethersproject/providers": "^5.6.0",
+    "@fontsource/roboto": "^4.5.7",
+    "@fontsource/roboto-mono": "^4.5.7",
+    "@glazed/did-session": "^0.1.1",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.9.1",
+    "@self.id/framework": "^0.3.2",
+    "@self.id/react": "^0.3.2",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
@@ -27,6 +36,9 @@
     "@usedapp/core": "^0.12.1",
     "graphql": "^16.3.0",
     "ipfs-deploy": "^11.2.0",
+    "key-did-provider-ed25519": "^2.0.1",
+    "lit-js-sdk": "^1.1.198",
+    "object-hash": "^3.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.3",
