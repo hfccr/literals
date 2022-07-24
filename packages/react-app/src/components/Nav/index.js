@@ -8,6 +8,9 @@ import { Explore } from './../Explore';
 import { MyTags } from './../MyTags';
 import { SocialProfile } from './../SocialProfile';
 import { Misinformation } from './../Misinformation';
+import { Xmtp } from './../Xmtp';
+import { CovalentJit } from './../CovalentJit';
+import { Roadmap } from './../Roadmap';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,7 +42,7 @@ function a11yProps(index) {
 }
 
 export function Nav() {
-  const [value, setValue] = React.useState(2);
+  const [value, setValue] = React.useState(6);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -61,7 +64,7 @@ export function Nav() {
           <Tab label="Case: Social Profile" {...a11yProps(4)} />
           <Tab label="Case: Misinformation" {...a11yProps(5)} />
           <Tab label="Case: XMTP" {...a11yProps(6)} />
-          <Tab label="Case: Gaming" {...a11yProps(7)} />
+          <Tab label="Covalent JIT" {...a11yProps(7)} />
           <Tab label="Roadmap" {...a11yProps(8)} />
         </Tabs>
       </Box>
@@ -84,13 +87,13 @@ export function Nav() {
         <Misinformation />
       </TabPanel>
       <TabPanel value={value} index={6}>
-        Team
+        <Xmtp />
       </TabPanel>
       <TabPanel value={value} index={7}>
-        Roadmap
+        <CovalentJit />
       </TabPanel>
       <TabPanel value={value} index={8}>
-        Roadmap
+        <Roadmap />
       </TabPanel>
     </Box>
   );

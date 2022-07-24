@@ -101,8 +101,13 @@ function Social() {
       />
       <CardContent>
         <Stack spacing={1} direction="row" sx={{ margin: 1 }}>
-          <Chip size="small" label="ETHLocal DAO Member" />
-          <Chip size="small" label="ETHLocal Token Holder" />
+          <Chip
+            size="small"
+            label="ETHLocal Member"
+            avatar={
+              <Avatar src="https://pbs.twimg.com/profile_images/1333830155287097349/rGY9wviF_400x400.jpg" />
+            }
+          />
         </Stack>
         <Typography variant="body2" color="text.secondary">
           Click on this link to submit the project.
@@ -120,21 +125,27 @@ export function SocialProfile() {
     <div>
       <Grid container spacing={8} sx={{ padding: 8 }}>
         <Grid item xs={12} sm={6}>
-          Verification via web2 based methods is centralized, gated to the
-          platform and only available to a select few
+          <Typography>
+            Verification via web2 based methods is centralized, gated to the
+            platform and only available to a select few
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <SocialVerified />
         </Grid>
         <Grid item xs={12} sm={6}>
-          Interacting with unverified profile is difficult and involves risk
+          <Typography>
+            Interacting with unverified profile is difficult and involves risk
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <SocialScammer />
         </Grid>
         <Grid item xs={12} sm={6}>
-          Literals provide decentralized, verifiable and open sources of truth
-          to provide trust
+          <Typography>
+            Literals provide decentralized, verifiable and open sources of truth
+            to provide trust
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Social />
