@@ -125,7 +125,7 @@ export function SocialProfile() {
     <div>
       <Grid container spacing={8} sx={{ padding: 8 }}>
         <Grid item xs={12} sm={6}>
-          <Typography>
+          <Typography variant="h5" color="white">
             Verification via web2 based methods is centralized, gated to the
             platform and only available to a select few
           </Typography>
@@ -134,7 +134,7 @@ export function SocialProfile() {
           <SocialVerified />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography>
+          <Typography variant="h5" color="white">
             Interacting with unverified profile is difficult and involves risk
           </Typography>
         </Grid>
@@ -142,7 +142,7 @@ export function SocialProfile() {
           <SocialScammer />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography>
+          <Typography variant="h5" color="white">
             Literals provide decentralized, verifiable and open sources of truth
             to provide trust
           </Typography>

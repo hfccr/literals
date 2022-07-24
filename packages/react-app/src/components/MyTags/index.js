@@ -6,9 +6,10 @@ import Button from '@mui/material/Button';
 import { useEthers } from '@usedapp/core';
 import { lit } from '../lit/index';
 import { ChipController } from '../ChipController';
+import { NETWORK } from './../../constants';
 
 export function MyTags() {
-  const { account, error } = useEthers();
+  const { account, error, chainId } = useEthers();
   const [literals, setLiterals] = useState([]);
   useEffect(() => {
     const getLiterals = async () => {
@@ -40,6 +41,11 @@ export function MyTags() {
       />
     );
   });
+  const mint = async () => {
+    const chainName = NETWORK(chainId).name;
+    const mint = await lit.mintLit(chainName);
+    alert(JSON.stringify(mint));
+  };
   const getIpfsLink = async () => {
     const metadata = await lit.storeAsNft(account.toLowerCase());
     alert(JSON.stringify(metadata));
@@ -52,6 +58,13 @@ export function MyTags() {
         }}
       >
         Get IPFS Link
+      </Button>
+      <Button
+        onClick={() => {
+          mint();
+        }}
+      >
+        Be Eligible For More Tags
       </Button>
       <Stack
         spacing={4}

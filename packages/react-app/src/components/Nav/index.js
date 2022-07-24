@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { Intro } from './../Intro';
+import { Workings } from './../Workings';
 import { Explore } from './../Explore';
 import { MyTags } from './../MyTags';
 import { SocialProfile } from './../SocialProfile';
@@ -42,7 +43,7 @@ function a11yProps(index) {
 }
 
 export function Nav() {
-  const [value, setValue] = React.useState(6);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -58,7 +59,7 @@ export function Nav() {
           centered
         >
           <Tab label="About" {...a11yProps(0)} />
-          <Tab label="Trust Models" {...a11yProps(1)} />
+          <Tab label="Workings" {...a11yProps(1)} />
           <Tab label="Explore" {...a11yProps(2)} />
           <Tab label="My Tags" {...a11yProps(3)} />
           <Tab label="Case: Social Profile" {...a11yProps(4)} />
@@ -72,7 +73,7 @@ export function Nav() {
         <Intro />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Intro />
+        <Workings />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Explore />

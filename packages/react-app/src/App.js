@@ -6,6 +6,7 @@ import '@fontsource/roboto-mono/300.css';
 import '@fontsource/roboto-mono/400.css';
 import '@fontsource/roboto-mono/500.css';
 import '@fontsource/roboto-mono/700.css';
+import { ThemeProvider } from '@mui/material/styles';
 // import { Contract } from '@ethersproject/contracts';
 import // shortenAddress,
 // useCall,
@@ -16,6 +17,7 @@ import React, { useEffect } from 'react';
 import { Nav } from './components/Nav';
 import { AppHeader } from './components/AppHeader';
 import Container from '@mui/material/Container';
+import { brandingDarkTheme } from './components/theme';
 
 // import { addresses, abis } from '@brub/contracts';
 // import GET_TRANSFERS from './graphql/subgraph';
@@ -59,10 +61,12 @@ function App() {
 
   return (
     <div>
-      <AppHeader />
-      <Container maxWidth="xl">
-        <Nav />
-      </Container>
+      <ThemeProvider theme={brandingDarkTheme}>
+        <AppHeader />
+        <Container maxWidth="xl">
+          <Nav />
+        </Container>
+      </ThemeProvider>
     </div>
   );
 }

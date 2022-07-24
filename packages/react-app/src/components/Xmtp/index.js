@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 
 export function Xmtp() {
   return (
-    <Grid container spacing={7} sx={{ marginTop: 8 }}>
+    <Grid container spacing={7} sx={{ marginTop: 8, padding: 8 }}>
       <Grid item xs={6}>
         <Typography variant="h5">
           XMTP introductions and conversations become much more powerful with

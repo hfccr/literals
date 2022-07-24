@@ -192,7 +192,7 @@ class Lit {
     console.log('jwt', jwt);
     return jwt;
   }
-  async mintLit() {
+  async mintLit(chain) {
     const {
       tokenId,
       tokenAddress,
@@ -200,7 +200,7 @@ class Lit {
       txHash,
       errorCode,
       authSig,
-    } = await LitJsSdk.mintLIT({ chain, quantity });
+    } = await LitJsSdk.mintLIT({ chain: 'mumbai', quantity: 1 });
     console.log('Lit minted');
     console.log('tokenId', tokenId);
     console.log('tokenAddress', tokenAddress);
@@ -208,6 +208,14 @@ class Lit {
     console.log('txHash', txHash);
     console.log('errorCode', errorCode);
     console.log('authSig', authSig);
+    return {
+      tokenId,
+      tokenAddress,
+      mintingAddress,
+      txHash,
+      errorCode,
+      authSig,
+    };
   }
   async setLitAcl() {
     const accessControlConditions = [

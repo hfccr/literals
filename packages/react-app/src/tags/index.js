@@ -1,7 +1,7 @@
 import hash from 'object-hash';
 
 const baseUrl = 'universal-tags';
-const orgId = 'universal-tags3';
+const orgId = 'universal-tags4';
 const role = 'none';
 export const categories = {
   gaming: 'Gaming',
@@ -114,10 +114,10 @@ const rawTags = {
         accessControlConditions: [
           {
             contractAddress: '0xc716950e5DEae248160109F562e1C9bF8E0CA25B',
-            standardContractType: 'ERC721',
+            standardContractType: 'ERC1155',
             chain: 'mumbai',
             method: 'balanceOf',
-            parameters: [':userAddress'],
+            parameters: [':userAddress', '97'],
             returnValueTest: {
               comparator: '>',
               value: '0',
@@ -137,13 +137,13 @@ const rawTags = {
         accessControlConditions: [
           {
             contractAddress: '0xc716950e5DEae248160109F562e1C9bF8E0CA25B',
-            standardContractType: 'ERC721',
+            standardContractType: 'ERC1155',
             chain: 'mumbai',
             method: 'balanceOf',
-            parameters: [':userAddress'],
+            parameters: [':userAddress', '97'],
             returnValueTest: {
               comparator: '>',
-              value: '3',
+              value: '1',
             },
           },
         ],
@@ -160,13 +160,13 @@ const rawTags = {
         accessControlConditions: [
           {
             contractAddress: '0xc716950e5DEae248160109F562e1C9bF8E0CA25B',
-            standardContractType: 'ERC721',
+            standardContractType: 'ERC1155',
             chain: 'mumbai',
             method: 'balanceOf',
             parameters: [':userAddress'],
             returnValueTest: {
               comparator: '>',
-              value: '1',
+              value: '0',
             },
           },
         ],
@@ -182,13 +182,13 @@ const rawTags = {
         accessControlConditions: [
           {
             contractAddress: '0xc716950e5DEae248160109F562e1C9bF8E0CA25B',
-            standardContractType: 'ERC721',
+            standardContractType: 'ERC1155',
             chain: 'mumbai',
             method: 'balanceOf',
             parameters: [':userAddress'],
             returnValueTest: {
               comparator: '>',
-              value: '1',
+              value: '0',
             },
           },
         ],
@@ -204,13 +204,13 @@ const rawTags = {
         accessControlConditions: [
           {
             contractAddress: '0xc716950e5DEae248160109F562e1C9bF8E0CA25B',
-            standardContractType: 'ERC721',
+            standardContractType: 'ERC1155',
             chain: 'mumbai',
             method: 'balanceOf',
-            parameters: [':userAddress'],
+            parameters: [':userAddress', '97'],
             returnValueTest: {
               comparator: '>',
-              value: '2',
+              value: '0',
             },
           },
         ],
@@ -227,13 +227,13 @@ const rawTags = {
         accessControlConditions: [
           {
             contractAddress: '0xc716950e5DEae248160109F562e1C9bF8E0CA25B',
-            standardContractType: 'ERC721',
+            standardContractType: 'ERC1155',
             chain: 'mumbai',
             method: 'balanceOf',
-            parameters: [':userAddress'],
+            parameters: [':userAddress', '97'],
             returnValueTest: {
               comparator: '>',
-              value: '2',
+              value: '1',
             },
           },
         ],

@@ -39,7 +39,7 @@ function SocialScammer(verification) {
             primary="You have at least 0.1 ETH in your account"
             secondary={
               <React.Fragment>
-                <Chip label={message} size="small" />
+                <Chip label={message} size="small" sx={{ margin: 2 }} />
               </React.Fragment>
             }
           />
@@ -82,13 +82,12 @@ export function CovalentJit() {
     <div>
       <Grid container spacing={8} sx={{ padding: 8 }}>
         <Grid item xs={12} sm={6}>
-          <Typography>
+          <Typography variant="h5" color="white">
             Covalent JIT provides a Just In Time verification of the access
-            control conditions. This means no verification is required by the
-            user. They can be plugged in anywhere and all the tags will be
-            verified without any workflow from the address. This provides an as
-            of now guarantee of the result. The LIT ACL interpreter for Covalent
-            currently supports single balance condition. Future versions will
+            control conditions. This means no verification submission is
+            required by the user. They can be plugged in anywhere and all the
+            tags will be verified without any workflow from the address. This
+            provides an as of now guarantee of the result. Future versions will
             fully support the LIT ACL language.
           </Typography>
         </Grid>

@@ -23,6 +23,7 @@ export function Explore() {
   const publishAllTags = async () => {
     await lit.publishAllTags(appliedTags.tests, chainName);
     console.log('All tags published');
+    alert('All tags published');
   };
   const applyForTags = async () => {
     await lit.applyForTags(appliedTags.tests, chainName);

@@ -1,17 +1,10 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import Chip from '@mui/material/Chip';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
@@ -153,7 +146,7 @@ export function Misinformation() {
     <div>
       <Grid container spacing={8} sx={{ padding: 8 }}>
         <Grid item xs={12} sm={6}>
-          <Typography>
+          <Typography variant="h5" color="white">
             By looking at the number of likes and dislikes on the posts, a
             typical person would assume the first fact to be correct.
           </Typography>
@@ -162,7 +155,7 @@ export function Misinformation() {
           <SocialVerified />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography>
+          <Typography variant="h5" color="white">
             Literal tags can help make the user a better decision in this case.
           </Typography>
         </Grid>
