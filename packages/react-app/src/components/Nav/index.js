@@ -7,6 +7,7 @@ import { Intro } from './../Intro';
 import { Explore } from './../Explore';
 import { MyTags } from './../MyTags';
 import { SocialProfile } from './../SocialProfile';
+import { Misinformation } from './../Misinformation';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -38,7 +39,7 @@ function a11yProps(index) {
 }
 
 export function Nav() {
-  const [value, setValue] = React.useState(3);
+  const [value, setValue] = React.useState(2);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -57,10 +58,11 @@ export function Nav() {
           <Tab label="Trust Models" {...a11yProps(1)} />
           <Tab label="Explore" {...a11yProps(2)} />
           <Tab label="My Tags" {...a11yProps(3)} />
-          <Tab label="Social Profile" {...a11yProps(4)} />
-          <Tab label="Join" {...a11yProps(5)} />
-          <Tab label="Web3" {...a11yProps(6)} />
-          <Tab label="Web2" {...a11yProps(7)} />
+          <Tab label="Case: Social Profile" {...a11yProps(4)} />
+          <Tab label="Case: Misinformation" {...a11yProps(5)} />
+          <Tab label="Case: XMTP" {...a11yProps(6)} />
+          <Tab label="Case: Gaming" {...a11yProps(7)} />
+          <Tab label="Roadmap" {...a11yProps(8)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -79,13 +81,16 @@ export function Nav() {
         <SocialProfile />
       </TabPanel>
       <TabPanel value={value} index={5}>
-        Join
+        <Misinformation />
       </TabPanel>
       <TabPanel value={value} index={6}>
-        Web3
+        Team
       </TabPanel>
       <TabPanel value={value} index={7}>
-        Web2
+        Roadmap
+      </TabPanel>
+      <TabPanel value={value} index={8}>
+        Roadmap
       </TabPanel>
     </Box>
   );

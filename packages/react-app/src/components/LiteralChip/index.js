@@ -10,8 +10,6 @@ export function LiteralChip({ tag, address, onClick }) {
       label={name}
       variant="outlined"
       avatar={<Avatar src={icon} />}
-      onDelete={() => {}}
-      deleteIcon={<CategoryIcon category={category} />}
       onClick={onClick}
     />
   );

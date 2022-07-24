@@ -43,7 +43,7 @@ export function Explore() {
       >
         Apply For Tags
       </Button>
-      <Grid container spacing={2}>
+      <Grid container spacing={5}>
         {tagCards}
       </Grid>
     </Container>

@@ -4,6 +4,7 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import YardIcon from '@mui/icons-material/Yard';
 import TableChartIcon from '@mui/icons-material/TableChart';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import { categories } from './../../tags';
 
 export function CategoryIcon({ category }) {
@@ -20,6 +21,8 @@ export function CategoryIcon({ category }) {
       return <YardIcon />;
     case categories.tableland:
       return <TableChartIcon />;
+    case categories.medicine:
+      return <MedicalServicesIcon />;
     default:
       return null;
   }

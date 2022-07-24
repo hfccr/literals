@@ -1,4 +1,12 @@
 import LitJsSdk from 'lit-js-sdk';
+import { NFTStorage } from 'nft.storage/dist/bundle.esm.min.js';
+
+const API_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGVmMWE5MDVDZDdFMWVGZjMxMDM3OGI2ZTJjQjUyMDFhMmNjN0QxNDgiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1ODY2MjI0NzQxNCwibmFtZSI6ImhhY2tmcyJ9.cuo_BUP-uSQV1s85sbHrKJ91_a7uRDhff1eaDhBE1Pg';
+
+const nftClient = new NFTStorage({ token: API_KEY });
+const dataURI =
+  'data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7';
 
 const client = new LitJsSdk.LitNodeClient();
 
@@ -30,6 +38,29 @@ const resourceId = {
 };
 
 class Lit {
+  async getExampleImage() {
+    const blob = await (await fetch(dataURI)).blob();
+    return blob;
+  }
+
+  async storeAsNft(address) {
+    const literals = await this.getAllLiteralsForAddress(address);
+    console.log('literals', literals);
+    const image = await this.getExampleImage();
+    const nft = {
+      image, // use image Blob as `image` field
+      name: 'Storing Literal verifications in IPFS',
+      description: 'Non custodial tagging service',
+      properties: {
+        literals,
+      },
+    };
+    const metadata = await nftClient.store(nft);
+
+    console.log('Literals stored as NFt!');
+    console.log('Metadata URI: ', metadata.url);
+    return metadata;
+  }
   async storeAllLiteralsForAddress(literals, address) {
     localStorage.setItem(`${prefix}${address}`, JSON.stringify(literals));
     return true;
