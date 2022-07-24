@@ -14,14 +14,19 @@ import Chip from '@mui/material/Chip';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
+const lensLogo =
+  'https://lens.xyz/static/media/lensfrens.2f28dc59c1c3058c6d170c5c6a5fecca.svg';
+
 function SocialVerified() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            J
-          </Avatar>
+          <Avatar
+            sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+            src={lensLogo}
+          ></Avatar>
         }
         action={
           <IconButton aria-label="settings">
@@ -47,9 +52,11 @@ function SocialScammer() {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            S
-          </Avatar>
+          <Avatar
+            sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+            src={lensLogo}
+          ></Avatar>
         }
         action={
           <IconButton aria-label="settings">
@@ -78,9 +85,11 @@ function Social() {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            D
-          </Avatar>
+          <Avatar
+            sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+            src={lensLogo}
+          ></Avatar>
         }
         action={
           <IconButton aria-label="settings">
@@ -109,7 +118,7 @@ function Social() {
 export function SocialProfile() {
   return (
     <div>
-      <Grid container spacing={6}>
+      <Grid container spacing={8} sx={{ padding: 8 }}>
         <Grid item xs={12} sm={6}>
           Verification via web2 based methods is centralized, gated to the
           platform and only available to a select few
